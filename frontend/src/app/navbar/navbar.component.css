@@ -1,0 +1,12 @@
+.mat-button {
+    min-width: 20px !important;
+    padding: 10px 15px !important;
+}
+
+.mat-toolbar-row{
+    padding: 4px !important;
+}
+
+.title{
+    margin-left: 10px;
+}

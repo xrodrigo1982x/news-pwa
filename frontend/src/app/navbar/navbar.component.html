@@ -1,0 +1,16 @@
+<mat-toolbar>
+    <mat-toolbar-row>
+        <mat-menu #mainMenu="matMenu">
+            <button mat-menu-item>Sports</button>
+            <button mat-menu-item>Politics</button>
+            <button mat-menu-item>International</button>
+            <mat-divider></mat-divider>
+            <button mat-menu-item>Login</button>
+            <button mat-menu-item>Register</button>
+        </mat-menu>
+        <button id="menuButton" mat-button [matMenuTriggerFor]="mainMenu">
+            <mat-icon>menu</mat-icon>
+        </button>
+        <span class="title">News</span>
+    </mat-toolbar-row>
+</mat-toolbar>
