@@ -14,7 +14,7 @@ import java.util.concurrent.TimeUnit;
 @AllArgsConstructor
 public class NewsFactory {
 
-    public static final String RANDOM_IMAGE_URL = "https://picsum.photos/200/300/?random";
+    public static final String RANDOM_IMAGE_URL = "https://picsum.photos/600/600/?random&";
     private final Faker faker;
     private NewsRepository newsRepository;
 
@@ -25,7 +25,7 @@ public class NewsFactory {
         header.setSummary(faker.lorem().paragraph(4));
         header.setDate(faker.date().past(10, TimeUnit.HOURS).toInstant().atZone(ZoneId.systemDefault()).toLocalDateTime());
         header.setSource(faker.internet().domainName());
-        header.setImageUrl(RANDOM_IMAGE_URL);
+        header.setImageUrl(RANDOM_IMAGE_URL + UUID.randomUUID().toString());
 
         newsRepository.add(header, StringUtils.join(faker.lorem().paragraphs(4), "\n"));
 
