@@ -9,6 +9,9 @@ import {MainModule} from "./main/main.module";
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import {NavbarComponent} from "./navbar/navbar.component";
 import {MaterialModule} from "./material/material.module";
+import { ServiceWorkerModule } from '@angular/service-worker';
+import { environment } from '../environments/environment';
+import {ArticlepageModule} from "./articlepage/articlepage.module";
 
 @NgModule({
     declarations: [
@@ -23,6 +26,8 @@ import {MaterialModule} from "./material/material.module";
         CoreModule,
         MaterialModule,
         MainModule,
+        ArticlepageModule,
+        ServiceWorkerModule.register('ngsw-worker.js', { enabled: environment.production }),
     ],
     providers: [],
     bootstrap: [AppComponent]

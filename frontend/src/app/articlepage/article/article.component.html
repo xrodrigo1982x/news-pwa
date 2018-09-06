@@ -1,0 +1,12 @@
+<mat-card *ngIf="article">
+    <mat-card-header>
+        <mat-card-title>{{article.title}}</mat-card-title>
+        <mat-card-subtitle>{{article.date}}</mat-card-subtitle>
+    </mat-card-header>
+    <img mat-card-image [src]="article.imageUrl" [alt]="article.title">
+    <mat-card-content>
+        <p *ngFor="let paragraph of getParagraphs()">
+            {{paragraph}}
+        </p>
+    </mat-card-content>
+</mat-card>
